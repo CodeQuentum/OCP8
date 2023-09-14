@@ -1,0 +1,25 @@
+/* Intro.css */
+.IntroComponent {
+    max-width: 78.125rem; /* 1250px */
+    text-align: center; 
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .IntroComponent h1 {
+    color: #0a3143;
+    font-size: 2.5rem;
+    margin-top: 5rem; 
+  }
+  
+  .IntroComponent p {
+    font-size: 1.5rem;
+    color: #333; 
+  }
+  
+  hr {
+    width: 750px;
+    height: 6px;
+    background-color: #3883b8;
+    margin-top: 1rem; 
+  }
