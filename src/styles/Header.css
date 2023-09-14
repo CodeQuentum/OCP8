@@ -1,0 +1,28 @@
+/* Header.css */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #f6f8f8;
+    padding: 10px; 
+  }
+  
+  header img {
+    border-radius: 50%;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  nav li {
+    font-size: 1.875rem;
+    margin-right: 5rem; 
+  }
+  
