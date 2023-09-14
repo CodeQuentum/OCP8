@@ -1,0 +1,15 @@
+/*** Footer.css ***/
+footer{
+display: flex;
+flex-direction: column;
+background-color: #000000;
+justify-content: center;
+text-align: center;
+height: 175px;
+}
+
+footer img{
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+}
