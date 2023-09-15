@@ -1,0 +1,73 @@
+/*** ContactForm.css ***/
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-form h2 {
+    color: #0a3143;
+  }
+  .nom-mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 18.75rem; /* 300px */
+    height: 1.563rem; /* 25px */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .form-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+  }
+  
+  .form-message label {
+    margin-bottom: 5px;
+  }
+  
+  .form-message textarea {
+    width: 25rem; /* 400px */
+    height: 6.25rem; /* 100px */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 9.375rem; /* 150px */
+    height: 4.688rem; /* 75px */
+    border-radius: 25px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #3883b8;
+    color: white;
+    font-size: 24px;
+  }
+  
+  button:hover {
+    background-color: #0a3143;
+  }
+  

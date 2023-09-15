@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/ContactForm.css' 
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -24,9 +25,14 @@ function ContactForm() {
   return (
     <div className="contact-form">
       <h2>Contactez-moi</h2>
+      <p>Si vous le souhaitez, vous pouvez remplir
+        ce formulaire de contact.
+        Je vous repondrais dans les plus bref delais.
+      </p>
       <form onSubmit={handleSubmit}>
+        <div className='nom-mail'>
         <div className="form-group">
-          <label htmlFor="name">Nom :</label>
+          <label htmlFor="name">Nom & prénom :</label>
           <input
             type="text"
             id="name"
@@ -47,7 +53,8 @@ function ContactForm() {
             required
           />
         </div>
-        <div className="form-group">
+        </div>
+        <div className="form-message">
           <label htmlFor="message">Message :</label>
           <textarea
             id="message"
