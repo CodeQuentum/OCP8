@@ -23,6 +23,7 @@ function ContactForm() {
   };
 
   return (
+    <section id='contact'>
     <div className="contact-form">
       <h2>Contactez-moi</h2>
       <p>Si vous le souhaitez, vous pouvez remplir
@@ -67,6 +68,7 @@ function ContactForm() {
         <button type="submit">Envoyer</button>
       </form>
     </div>
+    </section>
   );
 }
 

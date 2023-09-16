@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Intro.css'
 function Intro(){
     return (
+        <section id='a-propos'>
         <div className='introcontainer'>
         <div className='IntroComponent'>
         <h1>Quentin, Developper Web.</h1>
@@ -14,6 +15,7 @@ function Intro(){
         <hr />
         </div>
         </div>
+        </section>
     )
 }
 

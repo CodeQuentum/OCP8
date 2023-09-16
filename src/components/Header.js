@@ -6,13 +6,13 @@ function Header() {
     return (
         <header>
             <div className='logoContainer'>
-                <img src={logo} alt='Logo QDW'/>
+                    <img src={logo} alt='Logo QDW'/>
             </div>
             <nav>
                 <ul>
-                    <li>A propos</li>
-                    <li>Mes projets</li>
-                    <li>Contact</li>
+                    <li><a href="#a-propos">A propos</a></li>
+                    <li><a href="#mes-projets">Mes projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
