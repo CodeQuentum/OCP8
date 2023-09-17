@@ -2,17 +2,16 @@ import React from 'react';
 import Intro from '../components/Intro';
 import ProjectGallery from './ProjectGallery';
 import ContactForm from './ContactForm';
+import Apropos from './Apropos';
+import Competences from './Competences';
 
 function HomeContent(){
     return (
         <div>
             <Intro />
+            <Apropos />
+            <Competences />
             <ProjectGallery />
-            <h2>Contactez-moi</h2>
-      <p>Si vous le souhaitez, vous pouvez remplir
-        ce formulaire de contact.
-        Je vous repondrais dans les plus bref delais.
-      </p>
             <ContactForm />
         </div>
     );

@@ -11,6 +11,8 @@ header {
   
   header img {
     border-radius: 50%;
+    width: 4.688rem;
+    height: 4.688rem;/*75px*/
   }
   a{
     text-decoration: none;
@@ -25,7 +27,7 @@ header {
   }
   
   nav li {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     margin-right: 5rem; 
   }
   
