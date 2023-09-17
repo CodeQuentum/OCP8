@@ -1,5 +1,4 @@
 import React from 'react';
-import Intro from '../components/Intro';
 import ProjectGallery from './ProjectGallery';
 import ContactForm from './ContactForm';
 import Apropos from './Apropos';
