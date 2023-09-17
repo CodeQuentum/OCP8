@@ -1,10 +1,13 @@
 import React from 'react';
+import '../styles/NotFound.css';
+import ReturnButton from '../components/returnButton';
 
 function NotFound() {
   return (
-    <div>
-      <h2>Page non trouvée</h2>
-      <p>Désolé, la page que vous recherchez n'existe pas.</p>
+    <div className='notFound'>
+      <h2>404</h2>
+      <p>Ouuups! La page que vous avez demandé n'a pas été touvée</p>
+    <ReturnButton />
     </div>
   );
 }
