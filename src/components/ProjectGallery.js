@@ -5,7 +5,6 @@ import '../styles/ProjectsGallery.css';
 
 function ProjectGallery() {
   return (
-    <section id='mes-projets'>
     <div className="project-gallery">
       <h2>Mes projets</h2>
       <ul className='gallery'>
@@ -20,7 +19,6 @@ function ProjectGallery() {
       </ul>
       <hr />
     </div>
-    </section>
   );
 }
 

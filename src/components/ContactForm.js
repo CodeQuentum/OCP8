@@ -23,13 +23,8 @@ function ContactForm() {
   };
 
   return (
-    <section id='contact'>
+    <section id='section-3'>
     <div className="contact-form">
-      <h2>Contactez-moi</h2>
-      <p>Si vous le souhaitez, vous pouvez remplir
-        ce formulaire de contact.
-        Je vous repondrais dans les plus bref delais.
-      </p>
       <form onSubmit={handleSubmit}>
         <div className='nom-mail'>
         <div className="form-group">

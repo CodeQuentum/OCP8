@@ -1,15 +1,22 @@
 /*** Footer.css ***/
-footer{
-display: flex;
-flex-direction: column;
-background-color: #000000;
-justify-content: center;
-text-align: center;
-height: 175px;
-}
-
-footer img{
-    width: 135px;
-    height: 135px;
-    margin: 0 auto;
-}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  footer {
+    flex-shrink: 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    height: 175px;
+    display: flex;
+    align-items: center;
+  }

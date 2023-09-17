@@ -1,0 +1,22 @@
+.about h1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 42px;
+    color: #0a3143;
+}
+
+.about h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #0a3143;
+}
+
+.about p{
+    max-width: 78.125rem; /* 1250px */
+    text-align: center; 
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 1.5rem;
+}

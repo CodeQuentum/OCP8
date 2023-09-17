@@ -8,9 +8,15 @@ function HomeContent(){
         <div>
             <Intro />
             <ProjectGallery />
+            <h2>Contactez-moi</h2>
+      <p>Si vous le souhaitez, vous pouvez remplir
+        ce formulaire de contact.
+        Je vous repondrais dans les plus bref delais.
+      </p>
             <ContactForm />
         </div>
     );
 }
+
 
 export default HomeContent;
