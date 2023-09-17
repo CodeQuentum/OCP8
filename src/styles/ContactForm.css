@@ -55,7 +55,7 @@
     border-radius: 5px;
   }
   
-  button {
+  .contact-form button {
     width: 9.375rem; /* 150px */
     height: 4.688rem; /* 75px */
     border-radius: 25px;
@@ -67,7 +67,7 @@
     font-size: 24px;
   }
   
-  button:hover {
+  .contact-form button:hover {
     background-color: #0a3143;
   }
   

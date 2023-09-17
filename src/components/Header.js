@@ -3,6 +3,15 @@ import logo from '../assets/logo-header.jpg';
 import '../styles/Header.css';
 
 function Header() {
+    const scrollToSection = (sectionId) => {
+        const targetElement = document.getElementById(sectionId);
+    
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }
+      };
     return (
         <header>
             <div className='logoContainer'>
@@ -10,10 +19,10 @@ function Header() {
             </div>
             <nav>
                 <ul>
-                    <li><a href="#a-propos">A propos</a></li>
-                    <li><a href="#mes-competences">Competences</a></li>
-                    <li><a href="#mes-projets">Mes projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><button className='headerButton' onClick={() => scrollToSection('a-propos')}>A propos</button></li>
+                    <li><button className='headerButton' onClick={() => scrollToSection('mes-competences')}>Compétences</button></li>
+                    <li><button className='headerButton' onClick={() => scrollToSection('mes-projets')}>Mes projets</button></li>
+                    <li><button className='headerButton' onClick={() => scrollToSection('contact')}>Contact</button></li>
                 </ul>
             </nav>
         </header>
