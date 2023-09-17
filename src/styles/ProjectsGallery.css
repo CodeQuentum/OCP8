@@ -1,14 +1,17 @@
 /* ProjectsGallery.css */
 
 .project-gallery {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #c6d0de;
+  text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -23,7 +26,7 @@ h2 {
 }
 
 .project-gallery li {
-  width: 350px;
+  width: 17.5rem; /*280px*/
   max-width: 100%;
   position: relative;
   overflow: hidden;
@@ -32,7 +35,7 @@ h2 {
 
 .project-gallery li img {
   width: 100%;
-  height: 350px;
+  height: 17.5rem; /*280px*/
   object-fit: cover;
 }
 

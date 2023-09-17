@@ -49,7 +49,6 @@ function Competences() {
           </div>
         ))} 
       </div>
-      <hr />
     </section>
   );
 }

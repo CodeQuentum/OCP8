@@ -1,25 +1,19 @@
 /* Intro.css */
-.IntroComponent {
-    max-width: 78.125rem; /* 1250px */
-    text-align: center; 
-    margin: 0 auto;
-    padding: 2rem;
+.apropos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #c6d0de;
+  text-align: center;
+}
+
+  .introComponent h2{
+    font-size: 3rem;
   }
-  
-  .IntroComponent h1 {
-    color: #0a3143;
-    font-size: 2.5rem;
-    margin-top: 5rem; 
-  }
-  
-  .IntroComponent p {
+
+  .introComponent p{
     font-size: 1.5rem;
-    color: #333; 
-  }
-  
-  hr {
-    width: 750px;
-    height: 6px;
-    background-color: #3883b8;
-    margin-top: 3.75rem; 
+    max-width: 77.5rem; /*1240px*/
   }

@@ -1,8 +1,14 @@
 #mes-competences{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #EBEDEF;
+  text-align: center;
+}
+#mes-competences h2{
+  font-size: 3rem;
 }
 .competence-list{
     display: flex;

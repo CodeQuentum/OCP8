@@ -18,7 +18,6 @@ function ProjectGallery() {
           </li>
         ))}
       </ul>
-      <hr />
     </div>
     </section>
   );
