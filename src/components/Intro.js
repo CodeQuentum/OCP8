@@ -1,13 +1,14 @@
 import React from 'react';
-function Intro(){
-    return (
-        
-        <div>
-        <h1>Quentin, Developper Web.</h1>
-        <hr />
-        </div>
-        
-    )
+import '../styles/Intro.css';
+
+function Intro() {
+  return (
+    <div className="intro-container">
+      <h1 className="typing-effect">Quentin, Développeur Web</h1>
+      <p>Bienvenue sur mon portfolio</p>
+      <hr className="intro-divider" />
+    </div>
+  );
 }
 
 export default Intro;

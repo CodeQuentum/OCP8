@@ -8,7 +8,6 @@ import Competences from './Competences';
 function HomeContent(){
     return (
         <div>
-            <Intro />
             <Apropos />
             <Competences />
             <ProjectGallery />
