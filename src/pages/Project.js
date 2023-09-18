@@ -1,37 +1,62 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import projectData from '../data/projects.json';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NotFound from '../pages/NotFound';
+import ReturnButton from '../components/returnButton';
+import '../styles/Project.css';
 
 function Project() {
   const { id } = useParams();
 
-  console.log('ID du projet depuis les paramètres de l\'URL :', id);
-
-  const project = projectData.find(project => project.id === parseInt(id));
-
-  console.log('Projet trouvé dans les données :', project);
+  const project = projectData.find((project) => project.id === parseInt(id));
 
   if (!project) {
-    console.log('Projet non trouvé, affichage de la page NotFound');
-    return (
-      <NotFound />
-    );
+    return <NotFound />;
   }
 
+  const slickSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <main>
+    <div>  
       <Header />
-      <div>
-        <h2>Détails du Projet</h2>
-        <p>ID du Projet : {project.id}</p>
-        <p>Titre du Projet : {project.title}</p>
-        <p>Description du Projet : {project.description}</p>
-      </div>
-      <Footer />
-    </main>
+    <section className="project-container">
+      <main className="project-main">
+        <div className="project-carousel">
+          <Slider {...slickSettings}>
+            {project.pictures.map((picture, index) => (
+              <div className="project-slide" key={index}>
+                <img src={picture} alt={`projet ${index + 1}`} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <h1 className="project-title">{project.title}</h1>
+        <p className="project-description">{project.description}</p>
+        <div className="project-tags">
+          <ul className="project-tags-list">
+            {project.tags.map((tag, index) => (
+              <li className="project-tag" key={index}>
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ReturnButton />
+      </main>
+      
+    </section>
+    <Footer />
+    </div>
   );
 }
 
