@@ -1,6 +1,6 @@
 [
 	{
-	  "id": "1",
+	  "id": 1,
 	  "title": "Appartement cosy",
 	  "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
 	  "pictures": [
@@ -14,7 +14,7 @@
 	  "tags": ["Batignolle", "Montmartre"]
 	},
 	{
-	  "id": "2",
+	  "id": 2,
 	  "title": "Magnifique appartement proche Canal Saint Martin",
 	  "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
 	  "pictures": [
@@ -29,7 +29,7 @@
 	  "tags": ["Canal Saint Martin", "République", "Appartement"]
 	},
 	{
-	  "id": "3",
+	  "id": 3,
 	  "title": "Appartement chic au cœur de Paris",
 	  "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-1.jpg",
 	  "pictures": [
@@ -44,7 +44,7 @@
 	},
 	
 	{
-		"id": "4",
+		"id": 4,
 		"title": "Appartement chic au cœur de Paris",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-1.jpg",
 		"pictures": [

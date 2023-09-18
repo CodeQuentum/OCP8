@@ -8,10 +8,15 @@ import NotFound from '../pages/NotFound';
 function Project() {
   const { id } = useParams();
 
+  console.log('ID du projet depuis les paramètres de l\'URL :', id);
+
   const project = projectData.find(project => project.id === parseInt(id));
 
+  console.log('Projet trouvé dans les données :', project);
+
   if (!project) {
-       return (
+    console.log('Projet non trouvé, affichage de la page NotFound');
+    return (
       <NotFound />
     );
   }
@@ -19,13 +24,13 @@ function Project() {
   return (
     <main>
       <Header />
-    <div>
-      <h2>Détails du Projet</h2>
-      <p>ID du Projet : {project.id}</p>
-      <p>Titre du Projet : {project.title}</p>
-      <p>Description du Projet : {project.description}</p>
-    </div>
-     <Footer />
+      <div>
+        <h2>Détails du Projet</h2>
+        <p>ID du Projet : {project.id}</p>
+        <p>Titre du Projet : {project.title}</p>
+        <p>Description du Projet : {project.description}</p>
+      </div>
+      <Footer />
     </main>
   );
 }
