@@ -24,3 +24,12 @@ body {
     width: 4.688rem;
     height: 4.688rem;/*75px*/
   }
+  @media (max-width: 768px){
+    footer img{
+      width: 2.813rem;
+      height: 2.813rem; /* 45px */
+    }
+    footer {
+      height: 75px;
+    }
+  }

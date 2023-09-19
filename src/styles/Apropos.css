@@ -17,3 +17,14 @@
     font-size: 1.5rem;
     max-width: 77.5rem; /*1240px*/
   }
+
+  @media (max-width: 768px) {
+    .introComponent h2{
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .introComponent p{
+      font-size: 1rem;
+      max-width: 77.5rem; /*1240px*/
+    }
+  }

@@ -10,6 +10,9 @@
 #mes-competences h2{
   font-size: 3rem;
 }
+#mes-competences p{
+  margin-top: 0;
+}
 .competence-list{
     display: flex;
     flex-direction: row;
@@ -17,7 +20,7 @@
 }
 
 .competence-card {
-  width: 19.5rem;/*312px*/
+  max-width: 19.5rem;/*312px*/
   height: 9.375rem;/*150px*/
   background-color: #fff;
   border: 1px solid #eaeaea;
@@ -29,6 +32,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  overflow-y: auto;
 }
 .competence-card:hover {
     transform: translateY(-5px);
@@ -42,4 +47,23 @@
 
 .star-icon.empty-star {
   color: #ccc;
+}
+
+@media (max-width: 768px) {
+  #mes-competences{
+   height: 120vh; 
+ }
+ #mes-competences h2{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+  .competence-card {
+    width: 19.5rem;/*312px*/
+    height: 9.375rem;/*150px*/
+  }
+  .competence-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 }

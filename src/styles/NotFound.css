@@ -13,3 +13,8 @@
 .notFound p{
     font-size: 3.125rem;/*50px*/
 }
+@media (max-width: 768px){
+    .notFound p{
+        font-size: 1.563rem;/*25px*/
+    }
+}

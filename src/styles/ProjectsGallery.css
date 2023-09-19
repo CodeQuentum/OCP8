@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-h2 {
+.project-gallery h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -59,4 +59,18 @@ h2 {
   color: white;
   font-weight: bold;
   padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    height: 170vh; 
+  }
+  .project-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }

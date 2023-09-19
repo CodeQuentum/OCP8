@@ -80,4 +80,22 @@
   .contact-form button:hover {
     background-color: #0a3143;
   }
-  
+  @media (max-width: 768px) {
+    .contact-form h2 {
+      font-size: 2rem;
+    }
+    .contact-form p {
+      font-size: 1.2rem;
+    }
+    .contact-form label {
+      font-size: 1.2rem;
+    }
+    .form-message textarea {
+      width: 18.75rem; /* 300px */
+    }
+    .contact-form button {
+      width: 6.875rem; /* 110px */
+      height: 3.125rem; /* 50px */
+      font-size: 18px;
+    }
+  }

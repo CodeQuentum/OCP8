@@ -1,5 +1,4 @@
 /* styles/Intro.css */
-
 .intro-container {
     display: flex;
     flex-direction: column;
@@ -11,11 +10,8 @@
   }
   
   .typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 4s steps(40, end) forwards,
-      blink-caret 0.5s step-end infinite;
-    border-right: 2px solid #333;
+    display: inline-block;
+    text-align: center;
     font-size: 3rem;
     color: #333;
     margin-bottom: 20px;
@@ -46,10 +42,25 @@
     margin-top: 10px; 
   }
   .intro-divider {
-    width: 50px;
+    width: 3.125rem;/*50px*/
     height: 2px;
     background-color: #333;
     border: none;
     margin-top: 20px; 
+  }
+  @media (max-width: 768px) {
+    .typing-effect {
+      font-size: 1.6rem;
+      animation: none;
+    }
+  
+    .intro-container p {
+      font-size: 1.2rem;
+    }
+  
+    .intro-divider {
+      width: 30px;
+      margin-top: 10px;
+    }
   }
   
