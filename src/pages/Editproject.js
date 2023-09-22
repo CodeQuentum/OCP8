@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import projectData from '../data/projects.json';
+import axios from 'axios'; // Importez Axios
 import NotFound from './NotFound';
 
 function EditProject() {
@@ -8,28 +8,36 @@ function EditProject() {
   const [project, setProject] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
-    cover: null, 
+    cover: null,
     pictures: [],
     description: '',
     tags: [],
   });
 
   useEffect(() => {
-    const selectedProject = projectData.find((proj) => proj.id === parseInt(projectId));
-  
-    if (selectedProject) {
-      console.log('Projet sélectionné :', selectedProject);
-      setProject(selectedProject);
-      setFormData({
-        title: selectedProject.title,
-        cover: null, 
-        pictures: [],
-        description: selectedProject.description,
-        tags: selectedProject.tags.join(', '),
-      });
-    } else {
-      console.log('Projet non trouvé pour ID :', projectId);
+    async function fetchProjectData() {
+      try {
+        const response = await axios.get(`http://localhost:4000/api/projects/${projectId}`);
+        const selectedProject = response.data;
+
+        if (selectedProject) {
+          console.log('Projet sélectionné :', selectedProject);
+          setProject(selectedProject);
+          setFormData({
+            title: selectedProject.title,
+            cover: null,
+            pictures: [],
+            description: selectedProject.description,
+            tags: selectedProject.tags.join(', '),
+          });
+        } else {
+          console.log('Projet non trouvé pour ID :', projectId);
+        }
+      } catch (error) {
+        console.error('Erreur lors de la récupération du projet :', error);
+      }
     }
+    fetchProjectData();
   }, [projectId]);
 
   const handleInputChange = (e) => {
@@ -37,7 +45,7 @@ function EditProject() {
     if (type === 'file') {
       setFormData({
         ...formData,
-        [name]: files[0], 
+        [name]: files[0],
       });
     } else {
       setFormData({
@@ -47,17 +55,21 @@ function EditProject() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mettez à jour les données du projet avec formData
-    // (vous pouvez envoyer les données au backend ici)
-    console.log('Données soumises :', formData);
+    try {
+      await axios.put(`http://localhost:4000/api/projects/${projectId}`, formData);
+    } catch (error) {
+      console.error('Erreur lors de la mise à jour du projet :', error);
+    }
   };
 
   if (!project) {
-    return <div>
+    return (
+      <div>
         <NotFound />
-    </div>;
+      </div>
+    );
   }
 
   return (

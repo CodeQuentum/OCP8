@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; 
 
 function AddProject() {
   const [formData, setFormData] = useState({
@@ -14,7 +15,7 @@ function AddProject() {
     if (type === 'file') {
       setFormData({
         ...formData,
-        [name]: files[0], // Utilisez le premier fichier sélectionné
+        [name]: files[0],
       });
     } else {
       setFormData({
@@ -24,10 +25,30 @@ function AddProject() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Envoyez les données du nouveau projet au backend ici
-    console.log('Données soumises :', formData);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('title', formData.title);
+    formDataToSend.append('cover', formData.cover);
+    formDataToSend.append('description', formData.description);
+    formDataToSend.append('tags', formData.tags);
+
+    for (const picture of formData.pictures) {
+      formDataToSend.append('pictures', picture);
+    }
+
+    try {
+      const response = await axios.post('http://localhost:4000/api/projects', formDataToSend, {
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+      });
+      console.log('Réponse du serveur :', response.data);
+
+    } catch (error) {
+      console.error('Erreur lors de la soumission du projet :', error);
+    }
   };
 
   return (
