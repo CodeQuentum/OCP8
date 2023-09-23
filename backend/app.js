@@ -51,7 +51,7 @@ app.get('/api/projects', (req, res, next) => {
               "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
             ],
             "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. À 3 minutes à pied du Canal Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
-            "tags": ["Canal Saint Matin", "République", "Appartement"]
+            "tags": ["Canal Saint Martin", "République", "Appartement"]
           },
     ];
     res.status(200).json(projects);
