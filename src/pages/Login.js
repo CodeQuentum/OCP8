@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import '../styles/Login.css';
+import axios from 'axios';
 
 function Login() {
-  // Déclarez les états pour les champs du formulaire
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Gérez les changements dans les champs du formulaire
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -15,15 +13,20 @@ function Login() {
     setPassword(e.target.value);
   };
 
-  // Gérez la soumission du formulaire
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Effectuez ici la logique de connexion lorsque le serveur est prêt.
-    // Vous pouvez envoyer les données d'authentification au serveur.
+    try {
+      const response = await axios.post('http://localhost:4000/api/auth/login', {
+        email,
+        password,
+      });
 
-    console.log('Email:', email);
-    console.log('Mot de passe:', password);
+      console.log('Réponse du serveur :', response.data);
+
+    } catch (error) {
+      console.error('Erreur lors de la connexion :', error);
+    }
   };
 
   return (
